@@ -16,6 +16,6 @@ fs.readFile(markdown, 'utf8', function (err, data) {
 
   fs.writeFile(htmlFile, html, function (err) {
     if (err) return console.log(err);
-    console.log('Processed ' + markdown + ' -> wrote ' + htmlFile + '!');
+    console.log('Processed ' + markdown + ' -> wrote ' + htmlFile);
   });
 });
