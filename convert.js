@@ -3,7 +3,7 @@ const fs    = require('fs'),
   args      = process.argv.slice(2);
 
 if (args.length === 0) {
-  return console.log('<<< Syntax: node index [markdown-filename-without-extension] >>>');
+  return console.log('<<< Syntax: node convert [markdown-filename-without-extension] >>>');
 }
 
 const converter = new showdown.Converter( { 'noHeaderId': true } ),
