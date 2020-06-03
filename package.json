@@ -2,7 +2,7 @@
   "name": "markdown",
   "version": "1.0.0",
   "description": "Markdown Converter",
-  "main": "index.js",
+  "main": "convert.js",
   "dependencies": {
     "showdown": "^1.9.1"
   },
