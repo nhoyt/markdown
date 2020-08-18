@@ -30,9 +30,8 @@ const options = {
 // Instantiate the showdown converter
 const converter = new showdown.Converter(options);
 
-// Define the converter function: Given the name of a markdown file
-// as input, convert its contents to HTML and write the output file
-// to the output directory.
+// Define the converter function: Given the name of a markdown file,
+// convert its contents to HTML and write it to the output directory.
 function md2html (markdown) {
   let htmlFile = outputDir + '/' + path.basename(markdown, inputExt) + '.html';
   fs.readFile(markdown, 'utf8', function (err, data) {
@@ -54,6 +53,6 @@ if (args[0] === '-a' || args[0] === '--all') {
 else {
   // Convert markdown files specified as command-line arguments
   args.forEach(arg => {
-    if (arg.endsWith('.md') && fs.existsSync(arg)) md2html(arg);
+    if (arg.endsWith(inputExt) && fs.existsSync(arg)) md2html(arg);
   });
 }
