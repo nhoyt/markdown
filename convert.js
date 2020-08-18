@@ -15,7 +15,8 @@ if (!fs.existsSync(outputDir)){
 
 // Set the showdown options
 const options = {
-  'noHeaderId': true
+  'noHeaderId': true,
+  'openLinksInNewWindow': true
 };
 
 // Instantiate the showdown converter
