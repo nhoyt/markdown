@@ -7,7 +7,7 @@ const fs = require('fs'),
 
 // If no args provided, display help and exit
 if (args.length === 0 || args[0] === '-h' || args[0] === '--help') {
-  let syntax = 'node convert.js [--all || files-with-md-extension]'
+  let syntax = 'node convert.js [--all || files-with-md-extension]';
   console.log(`Syntax: ${syntax}`);
   process.exit();
 }
@@ -48,11 +48,11 @@ function md2html (markdown) {
 if (args[0] === '-a' || args[0] === '--all') {
   // Convert all markdown files in the current directory
   let files = fs.readdirSync('./').filter(filespec => filespec.endsWith(inputExt));
-  files.forEach(file => { md2html(file) });
+  files.forEach(file => { md2html(file); });
 }
 else {
   // Convert markdown files specified as command-line arguments
   args.forEach(arg => {
-    if (arg.endsWith(inputExt) && fs.existsSync(arg)) md2html(arg);
+    if (arg.endsWith(inputExt) && fs.existsSync(arg)) { md2html(arg); }
   });
 }
